@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171426">
+  <title>♥ Una carta para ti ♥</title>
+  <meta name="description" content="Una carta hecha especialmente para ti. ♥">
+  <style>
+    :root {
+      --fondo: #171426;
+      --rosa: #ff80ab;
+      --blanco: #fff0f5;
+      --morado: #302441;
+    }
+    * { box-sizing: border-box; }
+    html { min-height: 100%; background: var(--fondo); }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 16px;
+      background: var(--fondo);
+      color: var(--blanco);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+    .pagina {
+      width: min(100%, 700px);
+      min-height: calc(100vh - 32px);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    header { text-align: center; }
+    .portada {
+      display: block;
+      width: 180px;
+      max-width: 70%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      margin: 0 auto 5px;
+      border-radius: 7px;
+      background: var(--morado);
+      color: var(--rosa);
+      box-shadow: 0 0 0 1px #ff80ab55;
+    }
+    .cancion { color: var(--rosa); font: italic 13px Georgia, serif; margin: 4px 0; }
+    h1 { color: var(--rosa); font-size: clamp(20px, 4vw, 25px); margin: 12px 0 5px; }
+    .subtitulo { color: var(--blanco); font: italic 14px Arial, sans-serif; margin: 0 0 4px; }
+    .marco {
+      flex: 1;
+      min-height: 240px;
+      background: var(--morado);
+      border: 2px solid var(--rosa);
+      border-radius: 4px;
+      padding: 10px;
+      box-shadow: 0 8px 28px #0003;
+    }
+    .carta {
+      height: 100%;
+      max-height: 56vh;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      padding: 12px;
+      font: 16px/1.65 Georgia, serif;
+      color: var(--blanco);
+      scrollbar-color: var(--rosa) var(--morado);
+    }
+    footer { text-align: center; padding-bottom: 4px; }
+    .corazones { color: var(--rosa); font-size: 21px; letter-spacing: 5px; margin: 0 0 8px; }
+    .boton {
+      display: inline-block;
+      max-width: 100%;
+      border: 0;
+      border-radius: 5px;
+      padding: 12px 17px;
+      background: var(--rosa);
+      color: var(--fondo);
+      font: bold 14px Arial, sans-serif;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .15s, background .15s;
+    }
+    .boton:hover { background: #ffb3cc; transform: translateY(-1px); }
+    .nota { color: var(--rosa); font: italic 12px Georgia, serif; margin: 8px 0 0; }
+    @media (max-width: 480px) {
+      body { padding: 10px; }
+      .pagina { min-height: calc(100vh - 20px); gap: 9px; }
+      h1 { font-size: 20px; }
+      .carta { max-height: none; font-size: 15px; padding: 9px; }
+      .marco { min-height: 0; }
+      .boton { width: 100%; padding: 13px 10px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="pagina">
+    <header>
+      <img
+        class="portada"
+        src="https://img.youtube.com/vi/PbD5tyvPycw/hqdefault.jpg"
+        alt="Portada de Nothing de Steve Lacy"
+        onerror="this.style.display='none'; document.getElementById('respaldo').hidden=false;"
+      >
+      <div id="respaldo" hidden style="width:180px;max-width:70%;height:100px;margin:0 auto 5px;background:#302441;color:#ff80ab;display:grid;place-items:center;font:italic 16px Georgia,serif">♫ Nothing ♫</div>
+      <p class="cancion">nothing — Steve Lacy ♫</p>
+      <h1>💗 Una carta para el amor de mi vida 💗</h1>
+      <p class="subtitulo">Escucha mi corazon</p>
+    </header>
+
+    <section class="marco" aria-label="Carta romántica">
+      <div class="carta">Para mi keikito:
+
+En mi mente resides desde que nos conocimos.
+Mi principal pensamiento al llegar a casa, eras tu,
+y siempre lo seras, ya que mi amor no se puede interpretar
+como un simple pensamiento, sino que mi amor es algo que se queda
+y no abandona.
+
+Cuando tengamos nuestra casa propia y bombardeemos apopa,
+yo se que ese dia nos reiremos de todo lo que llamamos problemas.
+
+Creeme que espero cada dia por la eternidad poder besarte,
+poder abrazarte, poder hacerte piojito y dormir hasta tarde.
+Mis deseos se que el destino los cumplira asi como una vez lo hizo,
+y me puso a tu lado.
+
+Si te dedico esta cancion es por la misma razon que llevo mencionando;
+tu no te vas de mi mente y no hay otro pensamiento que no seas tu en
+todo momento
+
+Te amo mi keikito 💗</div>
+    </section>
+
+    <footer>
+      <p class="corazones">♥　💗　♥　💕　♥</p>
+      <a class="boton" href="https://youtu.be/PbD5tyvPycw?si=yBsVW8Knsbxoa6OA" target="_blank" rel="noopener noreferrer">🎵 Escucha nuestra canción 🎵</a>
+      <p class="nota">Hecho especialmente para ti. ♥</p>
+    </footer>
+  </main>
+</body>
+</html>
